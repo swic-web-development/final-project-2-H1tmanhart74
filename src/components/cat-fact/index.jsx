@@ -1,9 +1,9 @@
 import Section from './section'
 
-export default function CatFact({ fact }) {
+export default function CatFact({ fact, newFact, onClick }) {
   return (
     <div className="p-4">
-      <Section fact={fact} />
+      <Section fact={fact} newFact={newFact} onClick={onClick} />
     </div>
   )
 }
