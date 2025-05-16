@@ -3,22 +3,20 @@ import CatFact from './components/cat-fact'
 import { useEffect, useState } from 'react'
 
 export default function App() {
-  const [facts, setFact] = useState([])
+  const [fact, setFact] = useState('') // Use a string
 
   useEffect(() => {
     fetch('https://catfact.ninja/fact')
-      .then((response) => {
-        response.json()
-      })
+      .then((response) => response.json())
       .then((data) => {
-        setFact(data.results)
+        setFact(data.fact) // Use data.fact
       })
-      .catch((error) => console.error('Error fetching movies:', error))
   }, [])
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-green-900 text-white">
       <Header />
-      <CatFact facts={facts} />
+      <CatFact fact={fact} /> {/* Pass as fact, not facts */}
     </main>
   )
 }
