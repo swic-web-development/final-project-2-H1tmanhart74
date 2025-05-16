@@ -1,5 +1,5 @@
-export default function Section({ fact }) {
-  const { name, fact } = fact
+export default function Section({ facts }) {
+  const { name, fact } = facts
 
   return (
     <section className="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4">
