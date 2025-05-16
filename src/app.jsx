@@ -19,7 +19,7 @@ export default function App() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-green-900 text-white">
       <Header />
-      <CatFact fact={fact} newFact="Get a new cat fact" onClick={fetchFact} />
+      <CatFact fact={fact} onClick={fetchFact} />
     </main>
   )
 }
